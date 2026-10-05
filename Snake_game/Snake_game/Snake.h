@@ -10,6 +10,7 @@
 #define POS_X 24
 #define POS_Y 5
 #define FOOD L'◆'
+#define BODY  L'●'
 #define KEY_PRESS(VK)  ((GetAsyncKeyState(VK)&0x1) ? 1 : 0)
 
 //结构定义
@@ -55,6 +56,9 @@ typedef struct Snake
 
 //函数声明
 
+//光标的定位
+void SetPos(short x, short y);
+
 //游戏的初始化
 void GameStart(pSnake ps);
 
@@ -73,3 +77,25 @@ void CreateFood(pSnake ps);
 
 //运行游戏
 void GameRun(pSnake ps);
+
+//蛇走一步
+void SnakeMove(pSnake ps);
+
+//检测下一个结点是不是食物
+int NextIsFood(pSnakeNode pNextNode, pSnake ps);
+
+//吃掉食物
+void EatFood(pSnakeNode pNextNode, pSnake ps);
+
+//下一个位置不是食物
+void NoFood(pSnakeNode pNextNode, pSnake ps);
+
+//检测是否撞到墙
+void KILLBYWALL(pSnake ps);
+
+//检测是否撞到自己
+void KILLBYSELF(pSnake ps);
+
+//游戏善后工作
+void GameEnd(pSnake ps);
+
