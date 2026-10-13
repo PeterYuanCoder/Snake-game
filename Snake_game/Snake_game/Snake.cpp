@@ -147,7 +147,9 @@ again:
 void GameStart(pSnake ps)
 {
 	//0. 设置窗口的大小
+	//设置控制台窗⼝的⻓宽：设置控制台窗⼝的⼤⼩，30⾏，100列
 	system("mode con cols=100 lines=30");
+	//设置cmd窗口名称
 	system("title 贪吃蛇");
 
 	//1. 光标隐藏
