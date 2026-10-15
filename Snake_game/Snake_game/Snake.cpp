@@ -33,25 +33,25 @@ void CreateMap()
 	//上
 	for (int i = 0; i < 29; i++)
 	{
-		wprintf(L"%lc", L'■');
+		wprintf(L"%lc", WALL);
 	}
 	//下
 	SetPos(0, 26);
 	for (int i = 0; i < 29; i++)
 	{
-		wprintf(L"%lc", L'■');
+		wprintf(L"%lc", WALL);
 	}
 	//左
 	for (int i = 1; i <= 25; i++)
 	{
 		SetPos(0, i);
-		wprintf(L"%lc", L'■');
+		wprintf(L"%lc", WALL);
 	}
 	//右
 	for (int i = 1; i <= 25; i++)
 	{
 		SetPos(56, i);
-		wprintf(L"%lc", L'■');
+		wprintf(L"%lc", WALL);
 	}
 }
 

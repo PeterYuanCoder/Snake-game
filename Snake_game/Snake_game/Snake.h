@@ -9,6 +9,7 @@
 
 #define POS_X 24
 #define POS_Y 5
+#define WALL L'■'
 #define FOOD L'◆'
 #define BODY  L'●'
 #define KEY_PRESS(VK)  ((GetAsyncKeyState(VK)&0x1) ? 1 : 0)
@@ -42,7 +43,7 @@ typedef struct SnakeNode
 	struct SnakeNode* next;
 }SnakeNode,*pSnakeNode;
 
-//贪吃神
+//贪吃蛇
 typedef struct Snake
 {
 	pSnakeNode _pSnake;  //指向蛇头的指针
